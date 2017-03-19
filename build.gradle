@@ -1,0 +1,52 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.1.RELEASE'
+        springVersion = '4.3.6.RELEASE'
+		spockVersion = '1.1'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		//classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+//apply plugin: 'org.springframework.boot'
+
+jar {
+	baseName = 'testingStuff'
+	version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    //compile('javax.jms:javax.jms-api:2.0')
+	//compile('org.springframework.boot:spring-boot-starter-jdbc')
+	//compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	//compile('org.springframework.boot:spring-boot-starter-web')
+    //compile('org.springframework:spring-jms')
+	//compile('com.rabbitmq.jms:rabbitmq-jms:1.6.0')
+	//runtime('com.h2database:h2')
+    //runtime('org.postgresql:postgresql:9.4.1208')
+    //runtime('org.springframework.boot:spring-boot-starter-actuator')
+	//testCompile('org.springframework.boot:spring-boot-starter-test')
+	//testCompile('org.spockframework:spock-core:1.1-groovy-2.4-rc-3')
+    testCompile('junit:junit:4.12')
+    testCompile('org.spockframework:spock-spring:1.1-groovy-2.4-rc-3')
+	testCompile('org.gebish:geb-core:1.1.1')
+	testCompile('org.gebish:geb-spock:1.1.1')
+	testCompile('org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0')
+	testCompile('org.seleniumhq.selenium:selenium-support:2.52.0')
+    //testCompile("org.springframework.boot:spring-boot-starter-activemq")
+    //testCompile("org.apache.activemq:activemq-broker")
+    testCompile('org.jgotesting:jgotesting:0.12')
+}
